@@ -1,0 +1,2 @@
+Leer configuracion y mostrarla en arbol (todos los QMs como desconectados)
+Conectarme a los QM y mostrar en el arbol la lista de colas

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project mqtoolkit with Jar-in-Jar Loader">
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required                                        -->
+    <target name="create_run_jar">
+        <jar destfile="C:/Documents and Settings/israel/workspace/mqtoolkit/dist/MQTools.jar">
+            <manifest>
+                <attribute name="Main-Class" value="org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader"/>
+                <attribute name="Rsrc-Main-Class" value="cl.continuum.mqtoolkit.main.MQToolBox"/>
+                <attribute name="Class-Path" value="."/>
+                <attribute name="Rsrc-Class-Path" value="./ looks-2.1.4.jar com.ibm.mq.jar connector.jar com.ibm.mq.pcf-6.0.3.jar grouplayout.jar"/>
+            </manifest>
+            <zipfileset src="jar-in-jar-loader.zip"/>
+            <fileset dir="C:/Documents and Settings/israel/workspace/mqtoolkit/bin"/>
+            <zipfileset dir="C:\Documents and Settings\israel\workspace\mqtoolkit\lib" includes="looks-2.1.4.jar"/>
+            <zipfileset dir="C:\Documents and Settings\israel\workspace\mqtoolkit\lib" includes="com.ibm.mq.jar"/>
+            <zipfileset dir="C:\Documents and Settings\israel\workspace\mqtoolkit\lib" includes="connector.jar"/>
+            <zipfileset dir="C:\Documents and Settings\israel\workspace\mqtoolkit\lib" includes="com.ibm.mq.pcf-6.0.3.jar"/>
+            <zipfileset dir="C:\Documents and Settings\israel\workspace\.metadata\.plugins\org.dyno.visual.swing\layoutext" includes="grouplayout.jar"/>
+        </jar>
+    </target>
+</project>
